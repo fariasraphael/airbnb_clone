@@ -30,7 +30,31 @@ class UsersTest < ApplicationSystemTestCase
 
     click_on 'Log out'
     assert_text 'Signed out successfully.'
-    save_and_open_screenshot
+    # save_and_open_screenshot
+  end
+
+  test "log in a user" do
+    visit root_path
+    find('.avatar').click
+    click_on 'Sign up'
+    fill_in 'user_email', with: 'raphael_farias@hotmail.com'
+    fill_in 'user_password', with: '987654'
+    fill_in 'user_password_confirmation', with: '987654'
+    click_on 'Sign up'
+    assert_text 'Welcome! You have signed up successfully.'
+
+    find('.avatar').click
+    click_on 'Log out'
+    assert_text 'Signed out successfully.'
+
+    find('.avatar').click
+    click_on 'Log in'
+    fill_in 'user_email', with: 'raphael_farias@hotmail.com'
+    fill_in 'user_password', with: '987654'
+    click_on 'Log in'
+    assert_text 'Signed in successfully.'
+
+    # save_and_open_screenshot
 
   end
 end

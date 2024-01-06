@@ -2,3 +2,4 @@ raphael:
   email: "farias.raphael@gmail.com"
   first_name: "Raphael"
   last_name: "Farias"
+  encrypted_password: "987987"
