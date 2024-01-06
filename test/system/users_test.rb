@@ -22,10 +22,25 @@ class UsersTest < ApplicationSystemTestCase
     # save_and_open_screenshot
   end
 
+  test 'creating a new user blank email and password' do
+    visit root_path
+    find('.avatar').click
+    assert_selector 'a', text: 'Sign up'
+
+    click_on 'Sign up'
+
+    click_on 'Sign up'
+
+    assert_text "Email can't be blank"
+    assert_text "Password can't be blank"
+    assert_selector('.invalid-feedback', visible: true)
+
+    assert_equal new_user_registration_path, page.current_path
+    save_and_open_screenshot
+  end
+
   test 'creating a new user with already existing email' do
     visit root_path
-    assert_selector '#navbarDropdown', visible: true
-    assert_selector '.fa-solid.fa-bars', visible: true
 
     find('.avatar').click
     assert_selector 'a', text: 'Sign up'
@@ -41,6 +56,7 @@ class UsersTest < ApplicationSystemTestCase
     assert_text 'Please review the problems below:'
     assert_equal new_user_registration_path, page.current_path
     assert_selector('.invalid-feedback', visible: true)
+    assert_text 'Email has already been taken'
     # save_and_open_screenshot
   end
 
