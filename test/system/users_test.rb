@@ -1,12 +1,18 @@
 require "application_system_test_case"
 
+
 class UsersTest < ApplicationSystemTestCase
-  test "creating a new user" do
+
+  setup do
     visit root_path
+  end
+  
+  test "creating a new user" do
+    find('.avatar').click
+
     assert_selector '#navbarDropdown', visible: true
     assert_selector '.fa-solid.fa-bars', visible: true
 
-    find('.avatar').click
     assert_selector 'a', text: 'Sign up'
 
     click_on 'Sign up'
@@ -23,7 +29,6 @@ class UsersTest < ApplicationSystemTestCase
   end
 
   test 'creating a new user blank email and password' do
-    visit root_path
     find('.avatar').click
     assert_selector 'a', text: 'Sign up'
 
@@ -36,11 +41,10 @@ class UsersTest < ApplicationSystemTestCase
     assert_selector('.invalid-feedback', visible: true)
 
     assert_equal new_user_registration_path, page.current_path
-    save_and_open_screenshot
+    # save_and_open_screenshot
   end
 
   test 'creating a new user with already existing email' do
-    visit root_path
 
     find('.avatar').click
     assert_selector 'a', text: 'Sign up'
@@ -62,7 +66,6 @@ class UsersTest < ApplicationSystemTestCase
 
   test "log out a user" do
     login_as users(:raphael)
-    visit root_path
     find('#navbarDropdown').click
     assert_selector 'a', text: 'Log out'
 
@@ -72,7 +75,6 @@ class UsersTest < ApplicationSystemTestCase
   end
 
   test "log in a user" do
-    visit root_path
     find('.avatar').click
     click_on 'Sign up'
     fill_in 'user_email', with: 'raphael_farias@hotmail.com'
