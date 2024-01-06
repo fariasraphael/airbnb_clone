@@ -1,0 +1,13 @@
+# Buckland:
+#   title: 'Buckland'
+#   description: 'Long live the Halflings! Praise them with great praise!'
+# Hill_of_Spies:
+#   title: 'Hill of Spies'
+#   description: 'Ai! laurië lantar lassi súrinen (Namárië)'
+
+
+<% 1.upto(5) do |i| %>
+product_<%= i %>:
+  title: <%= Faker::Fantasy::Tolkien.location %>
+  description: <%= Faker::Fantasy::Tolkien.poem %>
+<% end %>
