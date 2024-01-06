@@ -2,11 +2,10 @@ require "application_system_test_case"
 
 
 class UsersTest < ApplicationSystemTestCase
-
   setup do
-    visit root_path
+    visit root_path unless @skip_common_actions
   end
-  
+
   test "creating a new user" do
     find('.avatar').click
 
@@ -65,10 +64,11 @@ class UsersTest < ApplicationSystemTestCase
   end
 
   test "log out a user" do
+    @skip_common_actions = true
     login_as users(:raphael)
+    visit root_path
     find('#navbarDropdown').click
     assert_selector 'a', text: 'Log out'
-
     click_on 'Log out'
     assert_text 'Signed out successfully.'
     # save_and_open_screenshot
