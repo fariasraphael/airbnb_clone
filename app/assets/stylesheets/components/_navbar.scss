@@ -26,3 +26,11 @@
   border: solid 1px lightgray;
   border-radius: 16px;
 }
+
+
+.navbar-lewagon #navbarDropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}

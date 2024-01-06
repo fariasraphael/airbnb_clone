@@ -11,8 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto border border-dark-subtle rounded-pill px-3 py-1">
         <% if user_signed_in? %>
-          <i class="fa-solid fa-bars me-2"></i>
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a href="#" class="avatar px-4" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa-solid fa-bars me-2 text-black"></i>
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
           </a>
@@ -22,8 +21,7 @@
               <%= link_to "Wishlist", "#", class: "dropdown-item" %>
               <hr class="dropdown-divider">
               <%= link_to "Airbnb your home", "#", class: "dropdown-item" %>
-              <%= link_to "Account", "#", class: "dropdown-item" %>
-              <%= link_to "Account", "#", class: "dropdown-item" %>
+              <%= link_to "Account", edit_user_registration_path, class: "dropdown-item" %>
               <hr class="dropdown-divider">
               <%= link_to "Gift cards", "#", class: "dropdown-item" %>
               <%= link_to "Help center", "#", class: "dropdown-item" %>
