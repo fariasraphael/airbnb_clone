@@ -19,7 +19,18 @@ class UsersTest < ApplicationSystemTestCase
     click_on 'Sign up'
     assert_text 'Welcome! You have signed up successfully.'
     assert_equal root_path, page.current_path
-    #save_and_open_screenshot
+    # save_and_open_screenshot
   end
 
+  test "log out a user" do
+    login_as users(:raphael)
+    visit root_path
+    find('#navbarDropdown').click
+    assert_selector 'a', text: 'Log out'
+
+    click_on 'Log out'
+    assert_text 'Signed out successfully.'
+    save_and_open_screenshot
+
+  end
 end
