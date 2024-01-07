@@ -43,7 +43,11 @@
 }
 
 .card-trip-infos i {
-font-size: 1.3vw;
-font-weight: lighter;
-color: #ca2323;
-}
+  font-size: 1.1vw;
+  // font-weight: lighter;
+  color: #161a56d4;
+  text-shadow: -1px -1px 0 #fff,
+                1px -1px 0 #fff,
+               -1px 1px 0 #fff,
+                1px 1px 0 #fff;
+  }
