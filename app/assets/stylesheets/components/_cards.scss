@@ -2,8 +2,10 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: calc(100vw/5.2);
+  width: calc(100vw/5.8);
   aspect-ratio: 1/1;
+  border-radius: 12px;
+  position: relative;
 }
 
 .card-trip > img {
@@ -30,12 +32,18 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  position: relative;
+  // position: relative;
 }
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+  right: 3%;
+  top: 3%;
+  width: 2vw;
+}
+
+.card-trip-infos i {
+font-size: 1.3vw;
+font-weight: lighter;
+color: #ca2323;
 }
