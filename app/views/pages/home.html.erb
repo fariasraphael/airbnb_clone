@@ -1,10 +1,16 @@
 <h1>Awesome Places</h1>
-<% @offers.each do |offer| %>
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
-    <div class="card-product-infos">
-      <h2><%= offer.title %></h2>
-      <p><%= offer.description %></p>
-    </div>
+  <div class="grid">
+    <% @offers.each do |offer| %>
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= offer.title %></h2>
+              <p><%= offer.description %></p>
+            </div>
+            <h2 class="card-trip-pricing">£99.99</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          </div>
+        </div>
+    <% end %>
   </div>
-<% end %>
