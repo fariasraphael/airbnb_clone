@@ -1,17 +1,26 @@
 <h1>Awesome Places</h1>
   <div class="grid">
     <% @offers.each do |offer| %>
-        <div class="card-trip">
+        <div class="card-trip position-relative">
           <div class="image">
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
           </div>
           <div class="card-trip-infos">
             <div>
               <h2><%= offer.title %></h2>
-              <p><%= offer.description %></p>
+              <p><%= offer.address %></p>
+              <div class="position-absolute bottom-0 start-0 card-trip-infos">
+                <h2 ><i class="fa-solid fa-user-group"></i><%= offer.number_of_guests %></h2>
+                <h2 class="card-trip-pricing">£99.99</h2>
+              </div>
             </div>
-            <h2 class="card-trip-pricing">£99.99</h2>
-            <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
+
+              <%# <div>
+                <h2 class="card-trip-pricing">£99.99</h2>
+                <i class="fa-solid fa-user-group"></i><%= offer.number_of_guests %>
+              <%#<img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+              </div> %>
+
             <i class="fa-solid fa-heart card-trip-user"></i>
           </div>
         </div>

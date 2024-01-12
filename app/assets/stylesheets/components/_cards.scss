@@ -3,7 +3,7 @@
   // background: white;
   //box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: calc(100vw/5.8);
-  aspect-ratio: 4/5;
+  aspect-ratio: 11/15;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
@@ -50,7 +50,7 @@
   width: 2vw;
 }
 
-.card-trip-infos i {
+.card-trip-infos > i {
   font-size: 1.1vw;
   // font-weight: lighter;
   color: #161a56d4;
