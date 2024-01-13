@@ -8,7 +8,6 @@ class PagesController < ApplicationController
   def my_offers
     @user = current_user
     @offers = Offer.where(user_id: @user)
-
   end
 
 end
