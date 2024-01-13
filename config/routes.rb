@@ -17,5 +17,9 @@ Rails.application.routes.draw do
     resources :offers, only: %i[new create]
   end
 
-  resources :offers, only: [:show]
+  resources :offers, only: %i[show]
+
+  resources :pages do
+    get :my_offers, on: :collection
+  end
 end
