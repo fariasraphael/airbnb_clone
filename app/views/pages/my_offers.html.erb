@@ -1,21 +1,2 @@
-<h1>Awesome Places</h1>
-  <div class="grid">
-    <% @offers.each do |offer| %>
-        <div class="card-trip position-relative">
-          <div class="image">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-          </div>
-          <div class="card-trip-infos">
-            <i class="fa-solid fa-heart card-trip-user"></i>
-            <div>
-              <h2><%= offer.title %></h2>
-              <p><%= offer.address %></p>
-            </div>
-            <div>
-              <i class="fa-solid fa-user-group card-i pe-1"></i><%= offer.number_of_guests %>
-              <i class="fa-solid fa-brazilian-real-sign card-i ps-3 pe-1"></i><%= offer.price %>
-            </div>
-          </div>
-        </div>
-    <% end %>
-  </div>
+<h1>My Places</h1>
+<%= render "shared/offers", offer: @offer %>
