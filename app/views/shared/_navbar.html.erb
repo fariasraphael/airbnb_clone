@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
 
@@ -22,6 +22,7 @@
               <hr class="dropdown-divider">
               <%= link_to "Airbnb your home", new_user_offer_path(current_user), class: "dropdown-item" %>
               <%= link_to "Account", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "My offers", my_offers_pages_path, class: "dropdown-item" %>
               <hr class="dropdown-divider">
               <%= link_to "Gift cards", "#", class: "dropdown-item" %>
               <%= link_to "Help center", "#", class: "dropdown-item" %>
