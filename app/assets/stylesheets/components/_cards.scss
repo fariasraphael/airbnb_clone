@@ -2,7 +2,7 @@
   display: flex;
   overflow: hidden;
   width: calc(100vw/5.8);
-  aspect-ratio: 4/6;
+  aspect-ratio: 11/16;
   border-radius: 12px;
 
   margin-bottom: 0.5vw;
@@ -24,7 +24,7 @@
 .card-trip h2 {
   font-size: 24px;
   font-weight: bold;
-  margin: 0;
+  min-height: 2.4vw;
   line-height: 24px;
 }
 
@@ -36,15 +36,6 @@
   line-height: 20px;
 }
 
-
-// .card-trip .card-trip-infos {
-//   padding: 4px 12px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: flex-end;
-  // position: relative;
-// }
-
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 3%;
@@ -55,19 +46,28 @@
 .card-trip-infos {
   padding: 1px 10px;
   display: flex;
-  margin: 4px 0;
+  justify-content: center;
+  margin: 8px 0;
   flex-direction: column;
   flex-grow: 1;
-  }
+}
+.card-trip-infos div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
 
 .card-trip-infos div:nth-of-type(1) {
   flex-grow: 2;
+  flex-direction: column;
 }
+
 .card-trip-infos div:nth-of-type(2) {
-  flex-grow: 1;
-}
-.card-trip-infos div:nth-of-type(3) {
-  flex-grow: 1;
+  //flex-grow: 1;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .card-trip-infos > i {
@@ -82,5 +82,4 @@
 
   .card-trip-infos .card-i {
     font-size: 12px;
-    ;
     }

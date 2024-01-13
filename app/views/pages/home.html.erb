@@ -8,17 +8,13 @@
           <div class="card-trip-infos">
             <i class="fa-solid fa-heart card-trip-user"></i>
             <div>
-                <h2><%= offer.title %></h2>
-              </div>
-
-              <div>
-                <p><%= offer.address %></p>
-              </div>
-
-              <div>
-                <i class="fa-solid fa-user-group card-i pe-1"></i><%= offer.number_of_guests %>
-                <i class="fa-solid fa-brazilian-real-sign card-i ps-3 pe-1"></i><%= offer.price %>
-              </div>
+              <h2><%= offer.title %></h2>
+              <p><%= offer.address %></p>
+            </div>
+            <div>
+              <i class="fa-solid fa-user-group card-i pe-1"></i><%= offer.number_of_guests %>
+              <i class="fa-solid fa-brazilian-real-sign card-i ps-3 pe-1"></i><%= offer.price %>
+            </div>
           </div>
         </div>
     <% end %>
