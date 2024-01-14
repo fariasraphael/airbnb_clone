@@ -1,13 +1,14 @@
 require "application_system_test_case"
 
 class UsersTest < ApplicationSystemTestCase
+  fixtures :users, :offers
   setup do
     visit root_path unless @skip_common_actions
   end
 
   test "creating a new user" do
-    find('.avatar').click
 
+    find('.avatar').click
     assert_selector '#navbarDropdown', visible: true
     assert_selector '.fa-solid.fa-bars', visible: true
     assert_selector 'a', text: 'Sign up'
@@ -19,12 +20,12 @@ class UsersTest < ApplicationSystemTestCase
     fill_in 'user_password_confirmation', with: '987654'
 
     assert_equal new_user_registration_path, page.current_path
-
     click_on 'Sign up'
 
     assert_text 'Welcome! You have signed up successfully.'
     assert_equal root_path, page.current_path
-    # save_and_open_screenshot
+
+    #save_and_open_screenshot
   end
 
   test 'creating a new user blank email and password' do
@@ -38,7 +39,7 @@ class UsersTest < ApplicationSystemTestCase
     assert_text "Password can't be blank"
     assert_selector('.invalid-feedback', visible: true)
     assert_equal new_user_registration_path, page.current_path
-    # save_and_open_screenshot
+    #save_and_open_screenshot
   end
 
   test 'creating a new user with already existing email' do
@@ -58,7 +59,7 @@ class UsersTest < ApplicationSystemTestCase
     assert_equal new_user_registration_path, page.current_path
     assert_selector('.invalid-feedback', visible: true)
     assert_text 'Email has already been taken'
-    # save_and_open_screenshot
+    save_and_open_screenshot
   end
 
   test "log out a user" do
@@ -72,7 +73,7 @@ class UsersTest < ApplicationSystemTestCase
     click_on 'Log out'
 
     assert_text 'Signed out successfully.'
-    # save_and_open_screenshot
+    save_and_open_screenshot
   end
 
   test "log in a user" do
@@ -97,6 +98,6 @@ class UsersTest < ApplicationSystemTestCase
     click_on 'Log in'
 
     assert_text 'Signed in successfully.'
-    # save_and_open_screenshot
+    save_and_open_screenshot
   end
 end
