@@ -7,7 +7,12 @@
 
 
 <% 1.upto(5) do |i| %>
+<% price = rand(5000..10000) / 100.0 %>
 product_<%= i %>:
-  title: <%= Faker::Fantasy::Tolkien.location %>
-  description: <%= Faker::Fantasy::Tolkien.poem %>
+ title: <%= Faker::Fantasy::Tolkien.location %>
+ description: <%= Faker::Fantasy::Tolkien.poem %>
+ user_id: 1
+ price: <%= price %>
+ number_of_guests: <%= rand(4..15).to_i %>
+ address: <%= Faker::Address.street_address %>
 <% end %>

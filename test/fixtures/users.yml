@@ -1,5 +1,13 @@
 raphael:
-  email: "farias.raphael@gmail.com"
-  first_name: "Raphael"
-  last_name: "Farias"
-  encrypted_password: "987987"
+ email: "farias.raphael@gmail.com"
+ first_name: "Raphael"
+ last_name: "Farias"
+ encrypted_password: "987987"
+ id: 1
+
+isabella:
+ email: "farias.isabella@gmail.com"
+ first_name: "Isabella"
+ last_name: "Farias"
+ encrypted_password: "987987"
+ id: 2
