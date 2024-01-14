@@ -1,10 +1,10 @@
-<%= simple_form_for [@user, @offer] do |f| %>
 
+<h1><%= form_title %></h1>
+<%= simple_form_for (user.present? ? [user, offer] : offer) do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :address %>
   <%= f.input :price %>
   <%= f.input :number_of_guests %>
   <%= f.submit %>
-
 <% end %>

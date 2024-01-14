@@ -1,12 +1,2 @@
-<h1>Offers#editi</h1>
-<p>Find me in app/views/offers/edit.html.erb</p>
-<%= simple_form_for @offer do |f| %>
-
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :address %>
-  <%= f.input :price %>
-  <%= f.input :number_of_guests %>
-  <%= f.submit %>
-
-<% end %>
+<h1></h1>
+<%= render "shared/form", user: @user, offer: @offer, form_title: "Edit your Airbnb"%>
